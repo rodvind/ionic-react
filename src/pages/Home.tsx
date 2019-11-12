@@ -15,21 +15,21 @@ import {
   IonTitle,
   IonToolbar
 } from '@ionic/react';
-import { book, build, colorFill, grid } from 'ionicons/icons';
+import { build, cart, car, flash, thermometer, wifi, tv } from 'ionicons/icons';
 import React from 'react';
 import './Tab1.css';
 
-const Tab1: React.FC = () => {
+const Home: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Tab One</IonTitle>
+          <IonTitle>Home</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent>
         <IonCard className="welcome-card">
-          <img src="/assets/shapes.svg" alt="" />
+          <img src="/assets/shapes.svg" alt="Data visualization" />
           <IonCardHeader>
             <IonCardSubtitle>Get Started</IonCardSubtitle>
             <IonCardTitle>Welcome to Ionic</IonCardTitle>
@@ -44,23 +44,32 @@ const Tab1: React.FC = () => {
 
         <IonList lines="none">
           <IonListHeader>
-            <IonLabel>Resources</IonLabel>
+            <IonLabel>Expenses</IonLabel>
           </IonListHeader>
           <IonItem href="https://ionicframework.com/docs/" target="_blank">
-            <IonIcon slot="start" color="medium" icon={book} />
-            <IonLabel>Ionic Documentation</IonLabel>
+            <IonIcon slot="start" color="medium" icon={cart} />
+            <IonLabel>Grocery</IonLabel>
           </IonItem>
           <IonItem href="https://ionicframework.com/docs/building/scaffolding" target="_blank">
             <IonIcon slot="start" color="medium" icon={build} />
-            <IonLabel>Scaffold Out Your App</IonLabel>
+            <IonLabel>Maintenance</IonLabel>
           </IonItem>
           <IonItem href="https://ionicframework.com/docs/layout/structure" target="_blank">
-            <IonIcon slot="start" color="medium" icon={grid} />
-            <IonLabel>Change Your App Layout</IonLabel>
+            <IonIcon slot="start" color="medium" icon={car} />
+            <IonLabel>Car</IonLabel>
           </IonItem>
           <IonItem href="https://ionicframework.com/docs/theming/basics" target="_blank">
-            <IonIcon slot="start" color="medium" icon={colorFill} />
-            <IonLabel>Theme Your App</IonLabel>
+            <IonIcon slot="start" color="medium" icon={flash} />
+            <IonLabel>Electricity</IonLabel>
+          </IonItem>
+          <IonItem href="https://ionicframework.com/docs/theming/basics" target="_blank">
+            <IonIcon slot="start" color="medium" icon={thermometer} />
+            <IonLabel>Gas</IonLabel>
+          </IonItem>
+          <IonItem href="https://ionicframework.com/docs/theming/basics" target="_blank">
+            <IonIcon slot="start" color="medium" icon={wifi} />
+            <IonIcon slot="start" color="medium" icon={tv} />
+            <IonLabel>TV + Internet</IonLabel>
           </IonItem>
         </IonList>
       </IonContent>
@@ -68,4 +77,4 @@ const Tab1: React.FC = () => {
   );
 };
 
-export default Tab1;
+export default Home;

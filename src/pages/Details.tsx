@@ -1,5 +1,5 @@
 import React from 'react';
-import { IonBackButton, IonButtons, IonHeader, IonPage, IonToolbar, IonTitle, IonContent } from '@ionic/react';
+import { IonBackButton, IonButtons, IonHeader, IonPage, IonToolbar, IonTitle, IonContent, IonList, IonItem, IonLabel, IonInput, IonToggle, IonItemSliding, IonItemOptions, IonItemOption } from '@ionic/react';
 
 const Details: React.FC = () => {
   return (
@@ -13,7 +13,45 @@ const Details: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent>
-        <p>Details</p>
+        <IonList>
+          <IonItem>
+            <IonLabel>Grocery</IonLabel>
+            <IonInput></IonInput>
+          </IonItem>
+          <IonItem>
+            <IonLabel>Toggle</IonLabel>
+            <IonToggle slot="end"></IonToggle>
+          </IonItem>
+        </IonList>
+
+        <IonList>
+          <IonItemSliding>
+            <IonItem>
+              <IonLabel>Item</IonLabel>
+            </IonItem>
+            <IonItemOptions side="end">
+              <IonItemOption onClick={() => {console.log('clicked')}}>Unread</IonItemOption>
+            </IonItemOptions>
+          </IonItemSliding>
+
+          <IonItemSliding>
+            <IonItem>
+              <IonLabel>Item</IonLabel>
+            </IonItem>
+            <IonItemOptions side="end">
+              <IonItemOption onClick={() => {}}>Unread</IonItemOption>
+            </IonItemOptions>
+          </IonItemSliding>
+
+          <IonItemSliding>
+            <IonItem>
+              <IonLabel>Item</IonLabel>
+            </IonItem>
+            <IonItemOptions side="end">
+              <IonItemOption onClick={() => {}}>Unread</IonItemOption>
+            </IonItemOptions>
+          </IonItemSliding>
+        </IonList>
       </IonContent>
     </IonPage>
   );
